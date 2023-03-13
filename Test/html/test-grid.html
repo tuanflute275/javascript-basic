@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            background: red;
+        }
+        .sidebar {
+            background: rgb(26, 201, 43);
+        }
+        .content {
+            background: rgb(105, 26, 178);
+        }
+        .footer {
+            background: rgb(190, 223, 24);
+        }
+        .item {
+            height: 300px;
+            width: 200px;
+            background: rgb(145, 67, 67);
+        }
+
+        .container {
+            display: grid;
+            grid-auto-rows: minmax(200px, auto);
+            gap: 5px;
+            grid-template-areas: 
+            "header header header header header"
+            "sidebar sidebar content content content"
+            "footer footer footer footer footer";
+            
+        }
+        .header {
+            grid-area: header;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .content {
+            grid-area: content;
+        }
+        .footer {
+            grid-area: footer;
+        }
+        @media screen and (max-width: 500px) {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header
+            
+        </div>
+        <div class="sidebar">sidebar</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

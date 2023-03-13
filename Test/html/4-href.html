@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-size: 40px;
+    }
+    /* bắt đầu bằng chuỗi */
+    a[href^="http"] {
+        color: rgb(177, 48, 138);
+    }
+    /* kết thúc bằng chuỗi */
+    a[href $= ".vn"] {
+        color: green;
+    }
+    /* trong chuỗi chứa chuỗi */
+    a[href*="www"] {
+        color: purple;
+    }
+    div[data-title="value"] {
+        color: rgb(196, 152, 31);
+    }
+    /*  */
+
+    /* h3 + .title1 {
+        color: red;
+    }
+    h3 ~ .title2 {
+        color: green;
+    } */
+</style>
+<body>
+    <!-- <h3>title</h3>
+    <h4 class="title1">content 1</h4>
+    <h5 class="title2">content 2</h5> -->
+
+    
+    <!-- href -->
+    <a href="http://google.com">goopgle.com</a>
+    <a href="google.vn">goopgle.vn</a>
+    <a href="www.demo.com">demo.com</a>
+    <a href="abc.xyz">abc.xyz</a>
+    <div data-title="value">value</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="image"></div>
+    <style>
+      .image {
+        height: 400px;
+        width: 90%;
+        margin-left: 50px;
+        margin-top: 50px;
+        /* background: #000; */
+        background: linear-gradient(
+            to left bottom,
+            rgba(51, 51, 51, 0.4) 30%,
+            rgba(255, 255, 255, 0.2) 30%
+          ),
+          url("https://tse2.mm.bing.net/th?id=OIP.oPwEw9RF92ogRSoC-M4xHgHaE7&pid=Api&P=0");
+      }
+      .title {
+        font-size: 50px;
+        margin-left: 150px;
+        display: inline-block;
+        color: transparent;
+        color: aqua;
+      }
+
+
+/* check thuộc tính có hỗ trợ trình duyệt hay không
+      nếu trình duyệt hỗ trowh thì in màu chuyển k hỗ trợ in màu aqua
+*/
+      @supports (-webkit-background-clip: text) {
+        .title {
+          color: transparent;
+          background: linear-gradient(to right bottom, #00aefd, #ffa400);
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+    </style>
+    <h3 class="title">Hello</h3>
+  </body>
+</html>

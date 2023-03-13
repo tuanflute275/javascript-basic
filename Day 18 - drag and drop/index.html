@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/asset/css/style.css">
+    </head>
+    <body>
+        <div class="box">
+            <div class="target" draggable="true"></div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </body>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(17, 188, 51);
+        }
+        .box{
+            margin-left: 20px;
+            width: 200px;height: 250px;
+            background: rgb(206, 210, 208);
+        }
+        .target{
+            width: 200px;height: 250px;
+            background: url(https://1.bp.blogspot.com/-sayajQTQWu0/XszBugz9BDI/AAAAAAAAmJk/5MW15-Rl9Ag4Ng9Nh9DA1hKoN4DPZAvQwCLcBGAsYHQ/s1600/Anh-gai-xinh-deo-kinh%2B%252827%2529.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        var boxes = document.querySelectorAll('.box')
+        var target = document.querySelector('.target')
+        console.log(boxes);
+
+        boxes.forEach(box=>{
+            box.addEventListener('dragover', function(e) {
+                e.preventDefault()
+                this.appendChild(target)
+            })
+        })
+    </script>
+</html>
