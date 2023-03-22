@@ -10,7 +10,7 @@ function randomColor(){
     return color
 }
 
-for (let i = 0; i < 200; i++) {
+for (let i = 0; i < 510; i++) {
     var square = document.createElement('div')
     square.classList.add('square')
     container.appendChild(square)
